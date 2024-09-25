@@ -97,3 +97,32 @@ model-viewer {
     flex-wrap: wrap; /* Permite que os botões quebrem para a próxima linha */
 }
 
+.skin-button {
+    width: 100px; /* Ajuste o tamanho conforme necessário */
+    height: 100px; /* Ajuste o tamanho conforme necessário */
+    margin: 10px; /* Espaçamento entre os botões */
+    border: 2px solid #414141; /* Borda do botão */
+    border-radius: 8px; /* Arredondar os cantos */
+    display: flex;
+    flex-direction: column; /* Coloca a imagem em cima do título */
+    align-items: center; /* Centraliza o conteúdo */
+    cursor: pointer; /* Muda o cursor ao passar o mouse */
+    transition: transform 0.3s; /* Efeito de transição */
+}
+
+.skin-button img {
+    width: 80%; /* Ajuste o tamanho da imagem */
+    height: auto; /* Mantém a proporção da imagem */
+    padding: 5%;
+}
+
+.skin-button span {
+    margin-top: 5px; /* Espaçamento entre a imagem e o título */
+    font-size: 14px; /* Tamanho da fonte */
+    text-align: center; /* Centraliza o texto */
+    color: #ffffff; /* Altere para a cor desejada, por exemplo, branco */
+}
+
+.skin-button:hover {
+    transform: scale(1.05); /* Aumenta levemente ao passar o mouse */
+}
