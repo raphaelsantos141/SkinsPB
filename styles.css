@@ -1,0 +1,100 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e2e2e2;
+    overflow-x: hidden;
+    /* Impede a rolagem horizontal */
+    height: 100vh;
+    /* Define a altura total da tela */
+}
+
+header {
+    background-color: transparent;
+    /* Torna o cabeçalho invisível */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    position: absolute;
+    /* Torna o cabeçalho sobreposto ao modelo 3D */
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    /* Coloca o cabeçalho acima do modelo 3D */
+}
+
+h1 {
+    margin: 0;
+}
+
+nav {
+    display: flex;
+    /* Torna o nav um contêiner flexível */
+    align-items: center;
+    /* Centraliza verticalmente os itens */
+    justify-content: center;
+    /* Centraliza horizontalmente os itens */
+    margin-top: 20px;
+    width: 100%;
+}
+
+button {
+    flex: 0 0 calc(12.5% - 10px); /* Cada botão ocupa 12,5% da largura do contêiner menos margens */
+    max-width: 100px; /* Limita a largura máxima dos botões */
+    display: none; /* Inicialmente oculta todos os botões */
+    background-color: transparent; /* Cor de fundo dos botões */
+    color: white; /* Cor do texto */
+    border: none; /* Remove a borda padrão */
+    border-radius: 5px; /* Borda arredondada */
+    padding: 8px; /* Ajuste para diminuir a altura do botão */
+    margin: 5px; /* Espaçamento entre os botões */
+    font-size: 14px; /* Ajuste o tamanho da fonte, se necessário */
+    transition: background-color 0.3s, transform 0.2s; /* Transição suave para hover */
+    cursor: pointer; /* Indica que é clicável */
+    border: 2px solid white; /* Borda branca */
+    height: auto; /* Permite que a altura seja ajustada pelo padding */
+    line-height: normal; /* Garante que o texto não fique muito espaçado */
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    /* Efeito de hover */
+}
+
+model-viewer {
+    display: block;
+    width: 100vw;
+    /* Preenche toda a largura da tela */
+    height: calc(100vh - 80px);
+    /* Preenche a altura da tela menos a altura do cabeçalho */
+    background-color: #000000;
+    /* Fundo escuro do modelo */
+}
+
+.button-container {
+    display: flex;
+    overflow: hidden;
+    /* Oculta itens fora do contêiner */
+    max-width: 70%;
+    /* Define uma largura máxima do contêiner */
+    width: 100%;
+    /* Permite que o contêiner se ajuste ao conteúdo */
+    justify-content: center;
+    /* Centraliza os botões */
+    margin: 0 10px;
+    /* Espaçamento nas laterais do contêiner */
+    padding: 10px;
+    /* Espaçamento interno do contêiner */
+    border-radius: 10px;
+    /* Borda arredondada do contêiner */
+    background-color: transparent;
+    /* Fundo transparente para o contêiner */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    /* Sombra suave */
+}
+
+button.visible {
+    display: inline-block;
+    /* Exibe apenas os botões visíveis */
+}

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exibição de Modelos 3D</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&display=swap" rel="stylesheet">
+    <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
+</head>
+<body>
+    <header>
+        <h1>Modelos 3D</h1>
+        <nav id="model-names">
+            <button id="prev-button" style="display:none;" onclick="showPrevItem()">&#10094;</button>
+            <div class="button-container" id="button-container">
+                <button onclick="changeModel('../models/AugA3/Aug_A3_PBIC.glb')">Aug PBIC1</button>
+                <button onclick="changeModel('../models/AugA3/Aug_A3_GripRunners.glb')">Aug Grip Runners2</button>
+                <button onclick="changeModel('../models/AugA3/Aug_A3_NonGrata.glb')">Aug NonGrata3</button>
+                <button onclick="changeModel('../models/AugA3/Aug_A3_PBIC.glb')">4</button>
+                <button onclick="changeModel('../models/AugA3/Aug_A3_GripRunners.glb')">5</button>
+                <button onclick="changeModel('../models/AugA3/Aug_A3_NonGrata.glb')">Aug NonGrata36</button>
+                <button onclick="changeModel('../models/AugA3/Aug_A3_PBIC.glb')">Aug PBIC17</button>
+                <button onclick="changeModel('../models/AugA3/Aug_A3_GripRunners.glb')">Aug Grip Runners28</button>
+                <button onclick="changeModel('../models/AugA3/Aug_A3_NonGrata.glb')">Aug NonGrata3</button>
+                <button onclick="changeModel('../models/AugA3/Aug_A3_PBIC.glb')">Aug PBIC1</button>
+                <button onclick="changeModel('../models/AugA3/Aug_A3_GripRunners.glb')">Aug Grip Runners2</button>
+                <button onclick="changeModel('../models/AugA3/Aug_A3_NonGrata.glb')">Aug NonGrata3</button>
+                <button onclick="changeModel('../models/AugA3/Aug_A3_PBIC.glb')">Aug PBIC1</button>
+                <button onclick="changeModel('../models/AugA3/Aug_A3_GripRunners.glb')">Aug Grip Runners2</button>
+                <button onclick="changeModel('../models/AugA3/Aug_A3_NonGrata.glb')">Aug NonGrata3</button>
+                <button onclick="changeModel('../models/AugA3/Aug_A3_PBIC.glb')">Aug PBIC1</button>
+                <button onclick="changeModel('../models/AugA3/Aug_A3_GripRunners.glb')">Aug Grip Runners2</button>
+                <button onclick="changeModel('../models/AugA3/Aug_A3_NonGrata.glb')">Aug NonGrata3</button>
+                <!-- Mais botões aqui -->
+            </div>
+            <button id="next-button" style="display:none;" onclick="showNextItem()">&#10095;</button>
+        </nav>
+    </header>
+    <main>
+        <model-viewer id="model-viewer" src="../models/AugA3/Aug_A3_PBIC.glb" alt="Modelo 3D" camera-controls
+            field-of-view="90deg" camera-orbit="180deg 75deg 1.5m" camera-target="-0.1m 0.8m 0m"
+            style="width: 100%; height: 100vh; background-color: #000000;">
+        </model-viewer>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

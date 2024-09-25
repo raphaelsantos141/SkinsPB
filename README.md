@@ -1,1 +1,1 @@
-# SkinsPB
+# galeria3d-pbv1
