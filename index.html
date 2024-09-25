@@ -14,25 +14,19 @@
         <nav id="model-names">
             <button id="prev-button" style="display:none;" onclick="showPrevItem()">&#10094;</button>
             <div class="button-container" id="button-container">
-                <button onclick="changeModel('../models/AugA3/Aug_A3_PBIC.glb')">Aug PBIC1</button>
-                <button onclick="changeModel('../models/AugA3/Aug_A3_GripRunners.glb')">Aug Grip Runners2</button>
-                <button onclick="changeModel('../models/AugA3/Aug_A3_NonGrata.glb')">Aug NonGrata3</button>
-                <button onclick="changeModel('../models/AugA3/Aug_A3_PBIC.glb')">4</button>
-                <button onclick="changeModel('../models/AugA3/Aug_A3_GripRunners.glb')">5</button>
-                <button onclick="changeModel('../models/AugA3/Aug_A3_NonGrata.glb')">Aug NonGrata36</button>
-                <button onclick="changeModel('../models/AugA3/Aug_A3_PBIC.glb')">Aug PBIC17</button>
-                <button onclick="changeModel('../models/AugA3/Aug_A3_GripRunners.glb')">Aug Grip Runners28</button>
-                <button onclick="changeModel('../models/AugA3/Aug_A3_NonGrata.glb')">Aug NonGrata3</button>
-                <button onclick="changeModel('../models/AugA3/Aug_A3_PBIC.glb')">Aug PBIC1</button>
-                <button onclick="changeModel('../models/AugA3/Aug_A3_GripRunners.glb')">Aug Grip Runners2</button>
-                <button onclick="changeModel('../models/AugA3/Aug_A3_NonGrata.glb')">Aug NonGrata3</button>
-                <button onclick="changeModel('../models/AugA3/Aug_A3_PBIC.glb')">Aug PBIC1</button>
-                <button onclick="changeModel('../models/AugA3/Aug_A3_GripRunners.glb')">Aug Grip Runners2</button>
-                <button onclick="changeModel('../models/AugA3/Aug_A3_NonGrata.glb')">Aug NonGrata3</button>
-                <button onclick="changeModel('../models/AugA3/Aug_A3_PBIC.glb')">Aug PBIC1</button>
-                <button onclick="changeModel('../models/AugA3/Aug_A3_GripRunners.glb')">Aug Grip Runners2</button>
-                <button onclick="changeModel('../models/AugA3/Aug_A3_NonGrata.glb')">Aug NonGrata3</button>
-                <!-- Mais botões aqui -->
+                <button onclick="changeModel('../models/AugA3/Aug_A3_PBIC.glb', 'Aug PBIC1')">Aug PBIC1</button>
+                <button onclick="changeModel('../models/AugA3/Aug_A3_GripRunners.glb', 'Aug Grip Runners')">Aug Grip Runners</button>
+                <button onclick="changeModel('../models/AugA3/Aug_A3_NonGrata.glb', 'Aug NonGrata')">Aug NonGrata</button>
+                <button onclick="changeModel('../models/AugA3/Aug_A3_PBIC.glb', 'Aug PBIC1')">Aug PBIC1</button>
+                <button onclick="changeModel('../models/AugA3/Aug_A3_GripRunners.glb', 'Aug Grip Runners')">Aug Grip Runners</button>
+                <button onclick="changeModel('../models/AugA3/Aug_A3_NonGrata.glb', 'Aug NonGrata')">Aug NonGrata</button>
+                <button onclick="changeModel('../models/AugA3/Aug_A3_PBIC.glb', 'Aug PBIC1')">Aug PBIC1</button>
+                <button onclick="changeModel('../models/AugA3/Aug_A3_GripRunners.glb', 'Aug Grip Runners')">Aug Grip Runners</button>
+                <button onclick="changeModel('../models/AugA3/Aug_A3_NonGrata.glb', 'Aug NonGrata')">Aug NonGrata</button>
+                <button onclick="changeModel('../models/AugA3/Aug_A3_PBIC.glb', 'Aug PBIC1')">Aug PBIC1</button>
+                <button onclick="changeModel('../models/AugA3/Aug_A3_GripRunners.glb', 'Aug Grip Runners')">Aug Grip Runners</button>
+                <button onclick="changeModel('../models/AugA3/Aug_A3_NonGrata.glb', 'Aug NonGrata')">Aug NonGrata</button>
+                <!-- Adicione mais botões de armas aqui -->
             </div>
             <button id="next-button" style="display:none;" onclick="showNextItem()">&#10095;</button>
         </nav>
@@ -43,6 +37,11 @@
             style="width: 100%; height: 100vh; background-color: #000000;">
         </model-viewer>
     </main>
+    <footer>
+        <nav id="skin-names">
+            <div class="button-container" id="skin-button-container"></div>
+        </nav>
+    </footer>
     <script src="script.js"></script>
 </body>
 </html>
