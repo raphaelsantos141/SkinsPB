@@ -1,90 +1,112 @@
-const skins = {
-    'Aug PBIC1': {
-        'Shark': '../models/AugA3/Aug_A3_PBIC_Shark.glb',
-        'Fang': '../models/AugA3/Aug_A3_PBIC_Fang.glb',
-        'Rosso': '../models/AugA3/Aug_A3_PBIC_Rosso.glb',
-        'Teste': '../models/AugA3/Aug_A3_PBIC_Rosso.glb',
+const models = [
+    {
+        src: '../models/AugA3/Aug_A3_PBIC.glb',
+        name: 'Aug PBIC1',
+        skins: [
+            { src: '../models/AugA3/Aug_A3_GripRunners.glb', name: 'GripRunners' },
+            { src: '../models/AugA3/Skin2.glb', name: 'Skin 2' },
+            { src: '../models/AugA3/Skin2.glb', name: 'Skin 2' },
+            { src: '../models/AugA3/Skin2.glb', name: 'Skin 2' },
+            { src: '../models/AugA3/Skin2.glb', name: 'Skin 2' },
+            { src: '../models/AugA3/Skin2.glb', name: 'Skin 2' },
+            { src: '../models/AugA3/Skin2.glb', name: 'Skin 2' },
+            { src: '../models/AugA3/Skin2.glb', name: 'Skin 2' },
+            { src: '../models/AugA3/Skin2.glb', name: 'Skin 2' },
+            { src: '../models/AugA3/Skin2.glb', name: 'Skin 2' },
+            { src: '../models/AugA3/Skin2.glb', name: 'Skin 2' },
+            { src: '../models/AugA3/Skin2.glb', name: 'Skin 2' },
+            { src: '../models/AugA3/Skin2.glb', name: 'Skin 2' },
+            { src: '../models/AugA3/Skin2.glb', name: 'Skin 2' },
+            { src: '../models/AugA3/Skin2.glb', name: 'Skin 2' },
+            { src: '../models/AugA3/Skin2.glb', name: 'Skin 2' },
+            { src: '../models/AugA3/Skin2.glb', name: 'Skin 2' },
+            { src: '../models/AugA3/Skin2.glb', name: 'Skin 2' },
+            { src: '../models/AugA3/Skin2.glb', name: 'Skin 2' },
+            { src: '../models/AugA3/Skin2.glb', name: 'Skin 2' },
+            { src: '../models/AugA3/Skin2.glb', name: 'Skin 2' },
+            { src: '../models/AugA3/Skin2.glb', name: 'Skin 2' },
+            { src: '../models/AugA3/Skin2.glb', name: 'Skin 2' },
+        ]
     },
-    'Aug Grip Runners': {
-        'Bull': '../models/AugA3/Aug_A3_GripRunners_Bull.glb',
-        'Corsa': '../models/AugA3/Aug_A3_GripRunners_Corsa.glb'
+    {
+        src: '../models/AugA3/Aug_A3_GripRunners.glb',
+        name: 'Aug Grip Runners',
+        skins: [
+            { src: '../models/AugA3/Skin3.glb', name: 'Skin 3' },
+            { src: '../models/AugA3/Skin4.glb', name: 'Skin 4' }
+        ]
     },
-    'Aug NonGrata': {
-        'Skin 1': '../models/AugA3/Aug_A3_GripRunners.glb',
-        'Skin 2': '../models/AugA3/Aug_A3_NonGrata_Skin2.glb'
-    }
-    // Adicione mais armas e skins conforme necessário
-};
+    {
+        src: '../models/AugA3/Aug_A3_NonGrata.glb',
+        name: 'Aug NonGrata',
+        skins: [
+            { src: '../models/AugA3/Skin5.glb', name: 'Skin 5' },
+            { src: '../models/AugA3/Skin6.glb', name: 'Skin 6' }
+        ]
+    },
+    // Adicione mais modelos e skins conforme necessário
+];
 
-let currentModel = '';
+let currentIndex = 0;
+const modelsToShow = 8;
+
+function updateModelList() {
+    const buttonContainer = document.getElementById('button-container');
+    buttonContainer.innerHTML = '';
+
+    const endIndex = Math.min(currentIndex + modelsToShow, models.length);
+    for (let i = currentIndex; i < endIndex; i++) {
+        const button = document.createElement('button');
+        button.innerText = models[i].name;
+        button.onclick = () => changeModel(models[i].src, models[i].name);
+        buttonContainer.appendChild(button);
+    }
+
+    document.getElementById('prev-button').style.display = currentIndex > 0 ? 'inline' : 'none';
+    document.getElementById('next-button').style.display = endIndex < models.length ? 'inline' : 'none';
+}
 
 function changeModel(modelSrc, modelName) {
     const modelViewer = document.getElementById('model-viewer');
-    modelViewer.src = modelSrc;
+    modelViewer.src = modelSrc;  // Muda o modelo 3D
     currentModel = modelName;
-    updateSkinButtons(modelName);
+    updateSkinButtons(modelName); // Atualiza os botões de skin
 }
 
 function updateSkinButtons(modelName) {
     const skinButtonContainer = document.getElementById('skin-button-container');
-    skinButtonContainer.innerHTML = ''; // Limpa botões anteriores
-    const modelSkins = skins[modelName];
+    skinButtonContainer.innerHTML = '';
 
-    if (modelSkins) {
-        // Cria um botão para cada skin
-        for (const skinName in modelSkins) {
+    const selectedModel = models.find(model => model.name === modelName);
+    if (selectedModel) {
+        selectedModel.skins.forEach(skin => {
             const button = document.createElement('button');
-            button.innerText = skinName;
-            button.onclick = () => changeModel(modelSkins[skinName], skinName);
+            button.innerText = skin.name;
+            button.onclick = () => changeModel(skin.src, skin.name); // Muda para a skin
             skinButtonContainer.appendChild(button);
-        }
-        document.getElementById('skin-names').style.display = 'flex'; // Exibe o menu de skins
+        });
+
+        // Exibe o contêiner de skins
+        skinButtonContainer.classList.add('show');
     } else {
-        document.getElementById('skin-names').style.display = 'none'; // Esconde se não houver skins
-    }
-}
-
-let visibleCount = 8; // Número de itens visíveis
-let startIndex = 0; // Índice inicial
-const buttons = document.querySelectorAll('#button-container button');
-const nextButton = document.getElementById('next-button');
-const prevButton = document.getElementById('prev-button');
-
-function updateButtonVisibility() {
-    buttons.forEach((button, index) => {
-        const isVisible = index >= startIndex && index < startIndex + visibleCount;
-        button.style.opacity = isVisible ? '1' : '0';
-        button.style.pointerEvents = isVisible ? 'auto' : 'none';
-    });
-
-
-
-    // Atualiza a visibilidade dos botões de navegação
-    nextButton.style.opacity = (startIndex + visibleCount < buttons.length) ? '1' : '0.5';
-    nextButton.style.pointerEvents = (startIndex + visibleCount < buttons.length) ? 'auto' : 'none';
-    prevButton.style.opacity = (startIndex > 0) ? '1' : '0.5';
-    prevButton.style.pointerEvents = (startIndex > 0) ? 'auto' : 'none';
-}
-
-function showNextItem() {
-    // Incrementa apenas se não passar do limite
-    if (startIndex + visibleCount < buttons.length) {
-        startIndex += 1;
-        updateButtonVisibility();
+        // Esconde o contêiner se não houver skins
+        skinButtonContainer.classList.remove('show');
     }
 }
 
 function showPrevItem() {
-    // Decrementa apenas se não passar do limite
-    if (startIndex > 0) {
-        startIndex -= 1;
-        updateButtonVisibility();
+    if (currentIndex > 0) {
+        currentIndex -= modelsToShow;
+        updateModelList();
     }
 }
 
-// Mantém os botões sempre visíveis
-nextButton.style.display = 'inline-block';
-prevButton.style.display = 'inline-block';
+function showNextItem() {
+    if (currentIndex + modelsToShow < models.length) {
+        currentIndex += modelsToShow;
+        updateModelList();
+    }
+}
 
-// Inicializa a visibilidade dos botões
-updateButtonVisibility();
+// Inicializa a lista de modelos ao carregar a página
+window.onload = updateModelList;

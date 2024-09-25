@@ -10,7 +10,6 @@ body {
 header {
     background-color: transparent;
     color: white;
-    padding: 20px;
     text-align: center;
     position: absolute;
     top: 0;
@@ -71,8 +70,8 @@ model-viewer {
 .button-container {
     display: flex;
     overflow: hidden;
-    max-width: 70%;
-    justify-content: flex-start; /* Alinha os botões à esquerda */
+    max-width: 100%;
+    justify-content: center; /* Alinha os botões à esquerda */
     width: 100%;
     margin: 0 auto; /* Centraliza o contêiner */
     padding: 10px;
@@ -83,7 +82,6 @@ model-viewer {
 }
 
 #skin-names {
-    display: none; /* Inicialmente oculto */
     margin-top: 20px; /* Espaçamento superior */
 }
 
@@ -92,3 +90,10 @@ model-viewer {
     justify-content: center;
     flex-wrap: wrap;
 }
+
+#skin-button-container.show {
+    display: flex; /* Mostra quando a classe 'show' é adicionada */
+    justify-content: center; /* Centraliza os botões */
+    flex-wrap: wrap; /* Permite que os botões quebrem para a próxima linha */
+}
+
