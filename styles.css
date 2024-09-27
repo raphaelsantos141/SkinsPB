@@ -1,28 +1,28 @@
+@import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300';
+
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #e2e2e2;
+    background-color: #253346;
     overflow-x: hidden;
     height: 100vh;
 }
 
 #logo {
-    width: 80px; /* Ajuste o tamanho conforme necessário */
-    height: auto; /* Mantém a proporção da imagem */
+    width: 80px;
+    /* Ajuste o tamanho conforme necessário */
+    height: auto;
+    /* Mantém a proporção da imagem */
     position: absolute;
     top: 20px;
     left: 50px;
-    z-index: 2; /* Garante que fique acima do conteúdo */
+    z-index: 2;
+    /* Garante que fique acima do conteúdo */
 }
 
-#pb {
-    width: 250px; /* Ajuste o tamanho conforme necessário */
-    height: auto; /* Mantém a proporção da imagem */
-    position: absolute;
-    top: 10px;
-    left: 50%;
-    z-index: 2; /* Garante que fique acima do conteúdo */
+#logo:hover {
+    transform: scale(1.05);
 }
 
 header {
@@ -38,16 +38,24 @@ header {
 }
 
 footer {
-    position: absolute; /* Permite que o rodapé se sobreponha ao modelo 3D */
-    bottom: 20px; /* Distância do fundo da tela */
-    left: 50%; /* Centraliza horizontalmente */
-    transform: translateX(-50%); /* Ajusta o rodapé para ficar centralizado */
-    z-index: 2; /* Garante que o rodapé esteja acima do modelo 3D */
-    width: 100%; /* Largura total */
-    padding: 10px 0; /* Espaçamento interno */
+    position: absolute;
+    /* Permite que o rodapé se sobreponha ao modelo 3D */
+    bottom: 20px;
+    /* Distância do fundo da tela */
+    left: 50%;
+    /* Centraliza horizontalmente */
+    transform: translateX(-50%);
+    /* Ajusta o rodapé para ficar centralizado */
+    z-index: 2;
+    /* Garante que o rodapé esteja acima do modelo 3D */
+    width: 100%;
+    /* Largura total */
+    padding: 10px 0;
+    /* Espaçamento interno */
 }
 
 h1 {
+    font-family: 'Montserrat', sans-serif;
     margin: 0;
 }
 
@@ -61,32 +69,67 @@ nav {
 
 button {
     font-family: 'Montserrat', sans-serif;
-    flex: 0 0 calc(12.5% - 10px);
-    max-width: 100%;
+    flex: 1 1 0;
+    /* Ajusta o botão para ocupar o mesmo espaço e crescer/reduzir conforme necessário */
     display: inline-block;
     background-color: transparent;
-    color: white;
+    color: #FFF;
+    transition: all 0.5s;
+    position: relative;
     border-radius: 50px;
     padding: 8px;
     margin: 5px;
-    font-size: 14px;
     transition: background-color 0.3s, transform 0.2s;
     cursor: pointer;
     border: 2px solid white;
-    white-space: nowrap; /* Impede que o texto quebre em várias linhas */
+    white-space: nowrap;
+    /* Impede quebra de linha */
+    overflow: hidden;
+    /* Esconde o texto extra */
+    text-overflow: ellipsis;
+    /* Adiciona "..." quando o texto for muito longo */
+}
+
+button span {
+    display: block;
+    font-size: 14px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }
 
 button:hover {
-    background-color: rgba(255, 255, 255, 0.2);
+    background: linear-gradient(180deg, #253346, #171f2b);
+    transform: scale(1.05);
+    /* Aumenta levemente ao passar o mouse */
+    filter: brightness(1.2);
 }
 
 button:disabled {
-    background-color: #555; /* Cor escura para o botão */
-    color: #ccc; /* Cor clara para o texto */
-    cursor: not-allowed; /* Cursor que indica que o botão não é clicável */
-    opacity: 0.6; /* Deixa o botão um pouco transparente */
+    background-color: #555;
+    /* Cor escura para o botão */
+    color: #ccc;
+    /* Cor clara para o texto */
+    cursor: not-allowed;
+    /* Cursor que indica que o botão não é clicável */
+    opacity: 0.6;
+    /* Deixa o botão um pouco transparente */
 }
 
+#prev-button,
+#next-button {
+    background-color: transparent;
+    border-radius: 50px;
+    font-size: 20px;
+    max-width: max-content;
+    border: none;
+}
+
+#prev-button:hover,
+#next-button:hover {
+    transform: scale(1.1);
+    background: transparent;
+}
 
 model-viewer {
     display: block;
@@ -98,18 +141,18 @@ model-viewer {
     font-family: 'Montserrat', sans-serif;
     display: flex;
     overflow: hidden;
-    max-width: 100%;
-    justify-content: center; /* Alinha os botões à esquerda */
-    width: 100%;
-    margin: 0 auto; /* Centraliza o contêiner */
+    max-width: 80%;
+    justify-content: center; /* Centraliza os botões */
+    width: 80%;
     padding: 30px;
     border-radius: 10px;
     background-color: transparent;
-    transition: transform 0.3s ease; /* Transição suave para o movimento */
+    transition: transform 0.3s ease;
 }
 
 #skin-names {
-    margin-top: 20px; /* Espaçamento superior */
+    margin-top: 20px;
+    /* Espaçamento superior */
 }
 
 #skin-button-container {
@@ -119,37 +162,56 @@ model-viewer {
 }
 
 #skin-button-container.show {
-    display: flex; /* Mostra quando a classe 'show' é adicionada */
-    justify-content: center; /* Centraliza os botões */
-    flex-wrap: wrap; /* Permite que os botões quebrem para a próxima linha */
+    display: flex;
+    /* Mostra quando a classe 'show' é adicionada */
+    justify-content: center;
+    /* Centraliza os botões */
+    flex-wrap: wrap;
+    /* Permite que os botões quebrem para a próxima linha */
 }
 
 .skin-button {
-    width: 100px; /* Ajuste o tamanho conforme necessário */
-    height: 100px; /* Ajuste o tamanho conforme necessário */
-    margin: 10px; /* Espaçamento entre os botões */
-    border: 2px solid #999999; /* Borda do botão */
-    border-radius: 8px; /* Arredondar os cantos */
+    width: 100px;
+    /* Ajuste o tamanho conforme necessário */
+    height: 100px;
+    /* Ajuste o tamanho conforme necessário */
+    margin: 10px;
+    /* Espaçamento entre os botões */
+    border: 2px solid #999999;
+    /* Borda do botão */
+    border-radius: 8px;
+    /* Arredondar os cantos */
     display: flex;
-    flex-direction: column; /* Coloca a imagem em cima do título */
-    align-items: center; /* Centraliza o conteúdo */
-    cursor: pointer; /* Muda o cursor ao passar o mouse */
-    transition: transform 0.3s; /* Efeito de transição */
+    flex-direction: column;
+    /* Coloca a imagem em cima do título */
+    align-items: center;
+    /* Centraliza o conteúdo */
+    cursor: pointer;
+    /* Muda o cursor ao passar o mouse */
+    transition: transform 0.3s;
+    /* Efeito de transição */
 }
 
 .skin-button img {
-    width: 80%; /* Ajuste o tamanho da imagem */
-    height: auto; /* Mantém a proporção da imagem */
+    width: 80%;
+    /* Ajuste o tamanho da imagem */
+    height: auto;
+    /* Mantém a proporção da imagem */
     padding: 5%;
 }
 
 .skin-button span {
-    margin-top: 5px; /* Espaçamento entre a imagem e o título */
-    font-size: 14px; /* Tamanho da fonte */
-    text-align: center; /* Centraliza o texto */
-    color: #ffffff; /* Altere para a cor desejada, por exemplo, branco */
+    margin-top: 5px;
+    /* Espaçamento entre a imagem e o título */
+    font-size: 14px;
+    /* Tamanho da fonte */
+    text-align: center;
+    /* Centraliza o texto */
+    color: #ffffff;
+    /* Altere para a cor desejada, por exemplo, branco */
 }
 
 .skin-button:hover {
-    transform: scale(1.05); /* Aumenta levemente ao passar o mouse */
+    transform: scale(1.05);
+    /* Aumenta levemente ao passar o mouse */
 }

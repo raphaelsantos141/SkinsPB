@@ -266,7 +266,6 @@ function updateModelList() {
     }
 }
 
-
 function changeModel(modelSrc, modelName) {
     const modelViewer = document.getElementById('model-viewer');
     modelViewer.src = modelSrc;  // Muda o modelo 3D
