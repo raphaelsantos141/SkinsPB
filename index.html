@@ -12,11 +12,11 @@
     <header>
         <h1>Modelos 3D</h1>
         <nav id="model-names">
-            <button id="prev-button" style="display:none;" onclick="showPrevItem()">&#10094;</button>
+            <button id="prev-button" disabled onclick="showPrevItem()">&#10094;</button>
             <div class="button-container" id="button-container"></div>
-            <button id="next-button" style="display:none;" onclick="showNextItem()">&#10095;</button>
+            <button id="next-button" onclick="showNextItem()">&#10095;</button>
         </nav>
-    </header>
+    </header>    
     <main>
         <model-viewer id="model-viewer" src="../models/AugA3/Aug_A3_PBIC.glb" alt="Modelo 3D" camera-controls
             field-of-view="90deg" camera-orbit="180deg 75deg 1.5m" camera-target="-0.1m 0.8m 0m"

@@ -249,9 +249,23 @@ function updateModelList() {
         buttonContainer.appendChild(button);
     }
 
-    document.getElementById('prev-button').style.display = currentIndex > 0 ? 'inline' : 'none';
-    document.getElementById('next-button').style.display = endIndex < models.length ? 'inline' : 'none';
+    // Atualiza o botão "prev"
+    const prevButton = document.getElementById('prev-button');
+    if (currentIndex > 0) {
+        prevButton.disabled = false;  // Habilita se não está no início
+    } else {
+        prevButton.disabled = true;   // Desabilita se está no início
+    }
+
+    // Atualiza o botão "next"
+    const nextButton = document.getElementById('next-button');
+    if (endIndex < models.length) {
+        nextButton.disabled = false;  // Habilita se não está no fim
+    } else {
+        nextButton.disabled = true;   // Desabilita se está no fim
+    }
 }
+
 
 function changeModel(modelSrc, modelName) {
     const modelViewer = document.getElementById('model-viewer');
@@ -304,6 +318,5 @@ function showNextItem() {
         updateModelList();
     }
 }
-
 // Inicializa a lista de modelos ao carregar a página
 window.onload = updateModelList;

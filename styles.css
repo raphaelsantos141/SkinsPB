@@ -62,6 +62,14 @@ button:hover {
     background-color: rgba(255, 255, 255, 0.2);
 }
 
+button:disabled {
+    background-color: #555; /* Cor escura para o botão */
+    color: #ccc; /* Cor clara para o texto */
+    cursor: not-allowed; /* Cursor que indica que o botão não é clicável */
+    opacity: 0.6; /* Deixa o botão um pouco transparente */
+}
+
+
 model-viewer {
     display: block;
     width: 100vw;
