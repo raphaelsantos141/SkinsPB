@@ -7,6 +7,14 @@ body {
     background-color: #253346;
     overflow-x: hidden;
     height: 100vh;
+    background-image: url('../img/thumb_skins/Aug_A3_GripRunners.jpg'); /* Insira o caminho da sua imagem aqui */
+    background-size: cover; /* Faz com que a imagem cubra toda a área visível */
+    background-position: center; /* Centraliza a imagem no fundo */
+    background-repeat: no-repeat; /* Impede que a imagem se repita */
+    background-attachment: fixed; /* Faz com que a imagem de fundo permaneça fixa enquanto você rola a página */
+    height: 100vh; /* Garante que o fundo cubra 100% da altura da viewport */
+    width: 100vw; /* Garante que o fundo cubra 100% da largura da viewport */
+    box-sizing: border-box; /* Garante que padding e bordas não causem overflow */
 }
 
 #logo {
@@ -73,7 +81,7 @@ button {
     /* Ajusta o botão para ocupar o mesmo espaço e crescer/reduzir conforme necessário */
     display: inline-block;
     background-color: transparent;
-    color: #FFF;
+    color: #f4ebf2;
     transition: all 0.5s;
     position: relative;
     border-radius: 5px;
