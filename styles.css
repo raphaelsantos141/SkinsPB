@@ -76,12 +76,12 @@ button {
     color: #FFF;
     transition: all 0.5s;
     position: relative;
-    border-radius: 50px;
+    border-radius: 5px;
     padding: 8px;
     margin: 5px;
     transition: background-color 0.3s, transform 0.2s;
     cursor: pointer;
-    border: 2px solid white;
+    border: 1px solid white;
     white-space: nowrap;
     /* Impede quebra de linha */
     overflow: hidden;
