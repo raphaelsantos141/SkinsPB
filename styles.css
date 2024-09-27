@@ -7,6 +7,15 @@ body {
     height: 100vh;
 }
 
+#logo {
+    width: 80px; /* Ajuste o tamanho conforme necessário */
+    height: auto; /* Mantém a proporção da imagem */
+    position: absolute;
+    top: 20px;
+    left: 50px;
+    z-index: 2; /* Garante que fique acima do conteúdo */
+}
+
 header {
     background-color: transparent;
     color: white;
@@ -14,7 +23,7 @@ header {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 90%;
     padding: 20pt;
     z-index: 1;
 }
@@ -27,7 +36,6 @@ footer {
     z-index: 2; /* Garante que o rodapé esteja acima do modelo 3D */
     width: 100%; /* Largura total */
     padding: 10px 0; /* Espaçamento interno */
-    background-color: rgba(0, 0, 0, 0.7); /* Fundo semi-transparente */
 }
 
 h1 {
@@ -48,7 +56,7 @@ button {
     display: inline-block;
     background-color: transparent;
     color: white;
-    border-radius: 5px;
+    border-radius: 50px;
     padding: 8px;
     margin: 5px;
     font-size: 14px;
@@ -84,7 +92,7 @@ model-viewer {
     justify-content: center; /* Alinha os botões à esquerda */
     width: 100%;
     margin: 0 auto; /* Centraliza o contêiner */
-    padding: 10px;
+    padding: 30px;
     border-radius: 10px;
     background-color: transparent;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
