@@ -235,7 +235,7 @@ const models = [
 ];
 
 let currentIndex = 0;
-const modelsToShow = 6;
+let modelsToShow = 6;
 
 function updateModelList() {
     const buttonContainer = document.getElementById('button-container');
@@ -318,5 +318,25 @@ function showNextItem() {
         updateModelList();
     }
 }
+
+// Função para atualizar o número de itens a serem exibidos com base na largura da tela
+function updateModelsToShow() {
+    if (window.innerWidth < 768) {
+        modelsToShow = 3; // Exibe 3 itens em telas menores
+    } else {
+        modelsToShow = 6; // Exibe 6 itens em telas maiores
+    }
+    updateModelList(); // Atualiza a lista de modelos após a alteração
+}
+
+// Inicializa a lista de modelos ao carregar a página
+window.onload = () => {
+    updateModelsToShow(); // Verifica a largura da tela na carga
+    updateModelList();
+};
+
+// Adiciona um listener para atualizar o número de itens a serem exibidos ao redimensionar a tela
+window.onresize = updateModelsToShow;
+
 // Inicializa a lista de modelos ao carregar a página
 window.onload = updateModelList;

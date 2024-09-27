@@ -16,6 +16,15 @@ body {
     z-index: 2; /* Garante que fique acima do conteúdo */
 }
 
+#pb {
+    width: 250px; /* Ajuste o tamanho conforme necessário */
+    height: auto; /* Mantém a proporção da imagem */
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    z-index: 2; /* Garante que fique acima do conteúdo */
+}
+
 header {
     background-color: transparent;
     color: white;
@@ -51,6 +60,7 @@ nav {
 }
 
 button {
+    font-family: 'Montserrat', sans-serif;
     flex: 0 0 calc(12.5% - 10px);
     max-width: 100%;
     display: inline-block;
@@ -82,7 +92,6 @@ model-viewer {
     display: block;
     width: 100vw;
     height: calc(100vh - 80px);
-    background-color: #000000;
 }
 
 .button-container {
@@ -95,7 +104,6 @@ model-viewer {
     padding: 30px;
     border-radius: 10px;
     background-color: transparent;
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease; /* Transição suave para o movimento */
 }
 
