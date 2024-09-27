@@ -3,8 +3,7 @@ const models = [
         src: '../models/AugA3/Aug_A3_PBIC.glb',
         name: '870MCS',
         skins: [
-            { src: '../models/AugA3/Aug_A3_GripRunners.glb', name: 'Skin 1', image: '../img/thumb_skins/Aug_A3_GripRunners.jpg' },
-            { src: '../models/AugA3/Skin2.glb', name: 'Skin 2', image: '../images/skin2.png' }
+            { src: '../models/AugA3/Aug_A3_GripRunners.glb', name: 'Non-Grata', image: '../img/thumb_skins/Aug_A3_GripRunners.jpg' }
         ]
     },
     {
