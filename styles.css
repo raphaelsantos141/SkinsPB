@@ -1,20 +1,29 @@
 @import 'https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300';
+@import 'https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@300;400;700&display=swap';
 
 body {
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #253346;
+    background-color: #292929;
     overflow-x: hidden;
     height: 100vh;
-    background-image: url('../img/thumb_skins/Aug_A3_GripRunners.jpg'); /* Insira o caminho da sua imagem aqui */
-    background-size: cover; /* Faz com que a imagem cubra toda a área visível */
-    background-position: center; /* Centraliza a imagem no fundo */
-    background-repeat: no-repeat; /* Impede que a imagem se repita */
-    background-attachment: fixed; /* Faz com que a imagem de fundo permaneça fixa enquanto você rola a página */
-    height: 100vh; /* Garante que o fundo cubra 100% da altura da viewport */
-    width: 100vw; /* Garante que o fundo cubra 100% da largura da viewport */
-    box-sizing: border-box; /* Garante que padding e bordas não causem overflow */
+    background-image: url('../img/background/background.png');
+    /* Insira o caminho da sua imagem aqui */
+    background-size: cover;
+    /* Faz com que a imagem cubra toda a área visível */
+    background-position: center;
+    /* Centraliza a imagem no fundo */
+    background-repeat: no-repeat;
+    /* Impede que a imagem se repita */
+    background-attachment: fixed;
+    /* Faz com que a imagem de fundo permaneça fixa enquanto você rola a página */
+    height: 100vh;
+    /* Garante que o fundo cubra 100% da altura da viewport */
+    width: 100vw;
+    /* Garante que o fundo cubra 100% da largura da viewport */
+    box-sizing: border-box;
+    /* Garante que padding e bordas não causem overflow */
 }
 
 #logo {
@@ -41,7 +50,6 @@ header {
     top: 0;
     left: 0;
     width: 95%;
-    padding: 20pt;
     z-index: 1;
 }
 
@@ -63,8 +71,19 @@ footer {
 }
 
 h1 {
-    font-family: 'Montserrat', sans-serif;
+    font-family: "Sulphur Point", sans-serif;
+    padding-top: 2%;
+    font-size: 30pt;
     margin: 0;
+}
+
+@media (max-width: 630px) {
+    h1 {
+        color:transparent;
+    }
+    #logo{
+        left: 50%;
+    }
 }
 
 nav {
@@ -107,7 +126,7 @@ button span {
 }
 
 button:hover {
-    background: linear-gradient(180deg, #253346, #171f2b);
+    background: transparent;
     transform: scale(1.05);
     /* Aumenta levemente ao passar o mouse */
     filter: brightness(1.2);
@@ -149,10 +168,10 @@ model-viewer {
     font-family: 'Montserrat', sans-serif;
     display: flex;
     overflow: hidden;
-    max-width: 80%;
-    justify-content: center; /* Centraliza os botões */
-    width: 80%;
-    padding: 30px;
+    max-width: 100%;
+    justify-content: center;
+    /* Centraliza os botões */
+    width: 90%;
     border-radius: 10px;
     background-color: transparent;
     transition: transform 0.3s ease;
