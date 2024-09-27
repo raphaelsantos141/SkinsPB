@@ -95,6 +95,7 @@ model-viewer {
 }
 
 .button-container {
+    font-family: 'Montserrat', sans-serif;
     display: flex;
     overflow: hidden;
     max-width: 100%;
@@ -127,7 +128,7 @@ model-viewer {
     width: 100px; /* Ajuste o tamanho conforme necessário */
     height: 100px; /* Ajuste o tamanho conforme necessário */
     margin: 10px; /* Espaçamento entre os botões */
-    border: 2px solid #414141; /* Borda do botão */
+    border: 2px solid #999999; /* Borda do botão */
     border-radius: 8px; /* Arredondar os cantos */
     display: flex;
     flex-direction: column; /* Coloca a imagem em cima do título */
