@@ -1,9 +1,9 @@
 const models = [
     {
-        src: '../models/AugA3/Aug_A3_PBIC.glb',
+        src: '../models/870MCS/870MCS.glb',
         name: '870MCS',
         skins: [
-            { src: '../models/AugA3/Aug_A3_GripRunners.glb', name: 'Non-Grata', image: '../img/thumb_skins/Aug_A3_GripRunners.jpg' }
+            { src: '../models/870MCS/870MCS_NonGrata.glb', name: 'Non-Grata', image: '../img/thumb_skins/Aug_A3_GripRunners.jpg' }
         ]
     },
     {
@@ -26,7 +26,7 @@ const models = [
         src: '../models/AugA3/Aug_A3_NonGrata.glb',
         name: 'Aug A3',
         skins: [
-            { src: '../models/AugA3/Skin5.glb', name: 'Skin 5', image: '../images/skin5.png' },
+            { src: '../models/AugA3/AUg_A3_PBIC2013.glb', name: 'PBIC 2013', image: '../images/skin5.png' },
             { src: '../models/AugA3/Skin6.glb', name: 'Skin 6', image: '../images/skin6.png' }
         ]
     },
