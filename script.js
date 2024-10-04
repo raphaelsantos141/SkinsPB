@@ -10,12 +10,12 @@ const models = [
         src: '../models/AK47/AK47_Standard.glb',
         name: 'AK47',
         skins: [
-            { src: '../models/AugA3/Skin3.glb', name: 'Skin 3', image: '../images/skin3.png' },
-            { src: '../models/AugA3/Skin4.glb', name: 'Skin 4', image: '../images/skin4.png' }
+            { src: '../models/AK47/AK47_BlueCamo.glb', name: 'Blue Camo', image: '../images/skin3.png' },
+            { src: '../models/AK47/AK47_NonGrata.glb', name: 'Non-Grata', image: '../images/skin4.png' }
         ]
     },
     {
-        src: '../models/AugA3/Aug_A3_NonGrata.glb',
+        src: '../models/AmokKukri/AmokKukri.glb',
         name: 'Amok Kukri',
         skins: [
             { src: '../models/AugA3/Skin5.glb', name: 'Skin 5', image: '../images/skin5.png' },
