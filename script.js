@@ -26,7 +26,7 @@ const models = [
         src: '../models/AugA3/Aug_A3_NonGrata.glb',
         name: 'Aug A3',
         skins: [
-            { src: '../models/AugA3/AUg_A3_PBIC_2013.glb', name: 'PBIC 2013', image: '../images/skin5.png' },
+            { src: '../models/AugA3/Aug_A3_PBIC_2013.glb', name: 'PBIC 2013', image: '../images/skin5.png' },
             { src: '../models/AugA3/Skin6.glb', name: 'Skin 6', image: '../images/skin6.png' }
         ]
     },
