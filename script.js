@@ -7,7 +7,7 @@ const models = [
         ]
     },
     {
-        src: '../models/AugA3/Aug_A3_GripRunners.glb',
+        src: '../models/AK47/AK47_Standard.glb',
         name: 'AK47',
         skins: [
             { src: '../models/AugA3/Skin3.glb', name: 'Skin 3', image: '../images/skin3.png' },
