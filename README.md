@@ -1,4 +1,4 @@
-# Skins Point Blank - Visualização Interativa de Skins Criadas desde 2013 🎮✨
+# Skins Point Blank 🎮✨
 
 ## Sobre o Projeto
 
